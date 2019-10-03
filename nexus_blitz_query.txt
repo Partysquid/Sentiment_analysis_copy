@@ -1,0 +1,3 @@
+select c.name, t1.*, t2.gameDuration from match_player t1
+inner join (select * from match_list where queueid = 1200 limit 10) t2 on t1.matchid = t2.matchid
+inner join champions c on t1.championId = c.championid
